@@ -9,7 +9,7 @@ import static HW13module.Tasks.HttpUtil.*;
 public class HttpMain {
     public static final String URL = "https://jsonplaceholder.typicode.com";
     public static void main(String[] args) throws IOException, InterruptedException, URISyntaxException {
-//        Task1
+        /* Task1: */
         User user1 = new User();
         user1.setId(13);
         user1.setName("Anastasiia");
@@ -29,14 +29,13 @@ public class HttpMain {
 
         System.out.println(getUserByUsername("Leopoldo_Corkery")); //get user by username
 
-//        //Task2
-//        int userId = 1;
+        /* Task2: */
         int userId = 3;
         int lastPostId = HttpUtil.getPostsByUserId(URI.create(URL), userId);
         String comments = HttpUtil.getLastCommentId(URI.create(URL), userId, lastPostId);
         HttpUtil.writeCommentsToJson(comments, userId, lastPostId);
 
-//          //Task3
+        /* Task3: */
         HttpUtil test = new HttpUtil();
         test.printOpenTodos(6);
     }

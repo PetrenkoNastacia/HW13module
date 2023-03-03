@@ -23,6 +23,7 @@ public class HttpUtil {
     private static final Gson GSON = new Gson();
     private static final HttpClient HTTP_CLIENT = HttpClient.newHttpClient();
 
+    /* Task1: */
     public static String postUser(User user) throws IOException, InterruptedException, URISyntaxException {
         URI uri = new URI("https://jsonplaceholder.typicode.com/users/");
         String userJson = GSON.toJson(user);
@@ -89,7 +90,7 @@ public class HttpUtil {
         return response.body();
     }
 
-    //Task2:
+    /* Task2: */
     public static int getPostsByUserId(URI uri, int userId) throws IOException, InterruptedException {
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(uri + "/users/" + userId + "/posts"))
@@ -135,7 +136,7 @@ public class HttpUtil {
         }
     }
 
-    //Task 3:
+    /* Task1: */
     public static String findTodos(int userId) throws IOException, InterruptedException, URISyntaxException {
         URI uri = new URI("https://jsonplaceholder.typicode.com");
         HttpRequest request = HttpRequest.newBuilder()
