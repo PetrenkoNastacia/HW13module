@@ -18,7 +18,7 @@ public class HttpMain {
         user1.setUsername("Nastacia");
         user1.setEmail("NastaciaTest@gmail.com");
         user1.setPhone("123-45-666");
-        user1.setWebsite("webTest");
+        user1.setWebsite("webTest.Nastya.com");
         System.out.println(HttpUtil.postUser(user1));             //create
 
         System.out.println(updateUser(6,user1));               //updateUser
