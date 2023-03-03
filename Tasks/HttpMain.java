@@ -1,12 +1,14 @@
 package HW13module.Tasks;
 
 import java.io.IOException;
-import java.net.URI;
 import java.net.URISyntaxException;
+import java.net.URI;
+
 
 import static HW13module.Tasks.HttpUtil.*;
 
 public class HttpMain {
+
     public static final String URL = "https://jsonplaceholder.typicode.com";
     public static void main(String[] args) throws IOException, InterruptedException, URISyntaxException {
         /* Task1: */

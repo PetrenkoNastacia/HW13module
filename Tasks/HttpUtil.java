@@ -8,15 +8,18 @@ import com.google.gson.JsonParser;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
-import java.util.ArrayList;
+
 import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
 
 public class HttpUtil {
 
@@ -128,7 +131,7 @@ public class HttpUtil {
 
     public static void writeCommentsToJson(String comments, int userId, int postId) throws IOException {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        File file = new File("HW13/src/main/java/Tasks/"
+        File file = new File("HW13/src/main/java/HW13module//Tasks/"
                 + "user-"+ userId + "-post-" + postId + "-comments.json");
         try (FileWriter filewriter = new FileWriter(file)) {
             JsonArray commentsArr = JsonParser.parseString(comments).getAsJsonArray();
